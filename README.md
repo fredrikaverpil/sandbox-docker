@@ -30,6 +30,11 @@ or
 
     exit
 
+#### Access files from outside the container
+
+Access files outside of the container by e.g. mounting a share or put stuff in
+the `assets` folder, which is mapped to `/assets` in the container.
+
 #### Stop container
 
     docker-compose stop
