@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+    image:
+      build: .
+      image: sandbox_image
+      container_name: sandbox_image
+
+    centos:
+      image: sandbox_image
+      hostname: sandbox
+      container_name: sandbox
+      volumes:
+        - ./assets:/assets
+        - ./assets/sandbox/etc/supervisor:/etc/supervisor
+      command: /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
