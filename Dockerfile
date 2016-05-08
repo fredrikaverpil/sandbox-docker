@@ -10,6 +10,10 @@ RUN mkdir -p /var/log/supervisor
 # Additional tools
 RUN yum install -y net-tools nmap git
 
+# Terminal
+RUN yum install -y nano
+RUN export TERM=xterm
+
 # Maya, CentOS 7
 # RUN yum install -y mesa-libGLw
 # RUN yum install -y libXp
